@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from "react";
 import { createPortal } from "react-dom";
 import { HiEllipsisVertical } from "react-icons/hi2";
 import styled from "styled-components";
-import { useOutsideClick } from "../hooks/useOutsideClick.js";
+import { useOutSideClick } from "../hooks/useOutSideClick.js";
 
 const Menu = styled.div`
   display: flex;
@@ -113,7 +113,7 @@ function Toggle({ id }) {
 
 function List({ id, children }) {
   const { openId, position, close } = useContext(MenusContext);
-  const ref = useOutsideClick(close, false);
+  const ref = useOutSideClick(close, false);
   // const ref = useOutsideClick(() => {
   //   console.log("close from Click outside");
   //   close();
