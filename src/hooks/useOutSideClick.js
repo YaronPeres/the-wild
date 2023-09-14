@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 // if the user want to listen to the event in the bubbling or captureing phase we set the true to another name
-export function useOutsideClick(handlerClose, listenCapturing = true) {
+export function useOutSideClick(handlerClose, listenCapturing = true) {
   //selecting element by using ref hook
   const ref = useRef();
 
