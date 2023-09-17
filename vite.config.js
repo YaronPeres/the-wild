@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@config": "/config.json", // Add this alias
+      "@config": "config.json", // Add this alias
     },
   },
 });
