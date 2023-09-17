@@ -7,7 +7,7 @@ import FormRowVertical from "../../ui/FormRowVertical";
 import SpinnerMini from "../../ui/SpinnerMini";
 
 import { useLogin } from "./useLogin";
-import config from "../../../config";
+import config from "@config"; // Use the alias
 
 function LoginForm() {
   const [email, setEmail] = useState("test@test.com");
