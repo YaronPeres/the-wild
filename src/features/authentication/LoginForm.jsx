@@ -7,11 +7,10 @@ import FormRowVertical from "../../ui/FormRowVertical";
 import SpinnerMini from "../../ui/SpinnerMini";
 
 import { useLogin } from "./useLogin";
-import config from "../../../config.json";
 
 function LoginForm() {
   const [email, setEmail] = useState("test@test.com");
-  const [password, setPassword] = useState(config.initialPassword);
+  const [password, setPassword] = useState(import.meta.env.VITE_LOGIN_PASSWORD);
   const { login, isLoading } = useLogin();
 
   function handleSubmit(e) {

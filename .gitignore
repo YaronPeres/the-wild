@@ -23,5 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-# Exclude config file
-config.json
