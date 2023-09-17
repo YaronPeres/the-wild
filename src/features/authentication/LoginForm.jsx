@@ -4,12 +4,14 @@ import Button from "../../ui/Button";
 import Form from "../../ui/Form";
 import Input from "../../ui/Input";
 import FormRowVertical from "../../ui/FormRowVertical";
-import { useLogin } from "./useLogin";
 import SpinnerMini from "../../ui/SpinnerMini";
 
+import { useLogin } from "./useLogin";
+import config from "../../../config.json";
+
 function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("test@test.com");
+  const [password, setPassword] = useState(config.initialPassword);
   const { login, isLoading } = useLogin();
 
   function handleSubmit(e) {
